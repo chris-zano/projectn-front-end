@@ -1,21 +1,21 @@
 @font-face {
     font-family: robotoSlab;
-    src: url("/assets/fonts/Roboto_Slab.ttf");
+    src: url("../../assets/fonts/Roboto_Slab.ttf");
 }
 
 @font-face {
     font-family: noahsFont;
-    src: url("/assets/fonts/noahs_font.ttf");
+    src: url("../../assets/fonts/noahs_font.ttf");
 }
 
 @font-face {
     font-family: robotoFlex;
-    src: url("/assets/fonts/RobotoFlex-Regular.ttf");
+    src: url("../../assets/fonts/RobotoFlex-Regular.ttf");
 }
 
 @font-face {
     font-family: inter;
-    src: url("/assets/fonts/inter.ttf");
+    src: url("../../assets/fonts/inter.ttf");
 }
 
 

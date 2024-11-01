@@ -1,5 +1,5 @@
-// const BASE_URL = "https://noahsproject-backend.onrender.com";
-const BASE_URL = "http://localhost:5137";
+const BASE_URL = "https://noahsproject-backend.onrender.com";
+// const BASE_URL = "http://localhost:5137";
 
 const addToFavorites = (button) => {
     const icon = button.querySelector('i');
@@ -61,13 +61,6 @@ const closePodcastModal = (button) => {
 
 const shareBibleVerse = (button) => {
     // TODO: implement functionality
-}
-
-const getVideoShortsPicks = () => {
-    for (let i = 0; i < 4; i++) {
-        const videoShortCard = createVideoShortsInBlock();
-        document.getElementById("shorts-videos-cards").append(videoShortCard)
-    }
 }
 
 const shuffleArray = (array) => {

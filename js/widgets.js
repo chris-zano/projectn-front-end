@@ -89,7 +89,7 @@ const createPodcastInlineItem = (podcast) => {
                 <i class="fa-solid fa-play"></i>
             </div>
         </div>
-        <div class="card-info" onclick="gotoPodcasts('./pages/podcasts.html')">
+        <div class="card-info">
             <div class="rc-title">${podcast.title}</div>
             <div class="rc-author-datetime">
                 <div class="rc-datetime">${new Date(podcast.createdAt).toDateString('en-US')}</div>
@@ -104,17 +104,6 @@ const createPodcastInlineItem = (podcast) => {
 
     return podcastItem;
 
-}
-
-const createVideoShortsInBlock = () => {
-    const videoShortCard = document.createElement("div");
-    videoShortCard.className = "videos-card";
-
-    videoShortCard.innerHTML = `
-        
-    `;
-
-    return videoShortCard;
 }
 
 const createRecommendedReadingCard = (article) => {
