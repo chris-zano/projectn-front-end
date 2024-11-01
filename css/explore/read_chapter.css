@@ -95,7 +95,7 @@ article.chapter #message {
 
 article.chapter #message > * {
     color: var(--text-safe-color);
-    line-height: 3.5ch;
+    line-height: 3ch;
     font-family: "Raleway" !important;
     font-size: 1.9ch;
 }
