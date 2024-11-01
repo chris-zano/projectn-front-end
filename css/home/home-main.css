@@ -186,12 +186,12 @@ section#daily-verse .verse-actions button p {
     font-weight: 500;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
 }
 
 .devotional-content p.message {
     color: #ebebeb;
-    margin-top: 0ch;
+    margin-top: -5ch;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: wrap;
