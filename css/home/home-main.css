@@ -87,14 +87,12 @@ section#daily-verse {
 }
 
 section#daily-verse .verse-card .title-text {
-    font-family: inter;
     font-size: 20px;
     font-weight: bold;
     color: var(--text);
 }
 
 section#daily-verse .verse-card .verse-date {
-    font-family: inter;
     color: var(--theme-icon);
     font-size: 13px;
     font-weight: light;
@@ -103,7 +101,6 @@ section#daily-verse .verse-card .verse-date {
 
 section#daily-verse .verse-card .verse-ref,
 section#daily-verse .verse-card .verse-ref a {
-    font-family: inter;
     color: var(--primary);
     text-decoration: underline;
     font-size: 15px;
@@ -112,7 +109,6 @@ section#daily-verse .verse-card .verse-ref a {
 }
 
 section#daily-verse .verse-card .insp-text {
-    font-family: inter;
     color: var(--theme-icon);
     font-size: 16px;
     font-weight: 500;
@@ -120,7 +116,7 @@ section#daily-verse .verse-card .insp-text {
 }
 
 section#daily-verse .verse-card .verse {
-    font-family: robotoSlab;
+    /* font-family: robotoSlab; */
     color: var(--text);
     font-size: 16px;
     font-weight: 600;
@@ -148,7 +144,6 @@ section#daily-verse .verse-actions button i {
 
 
 section#daily-verse .verse-actions button p {
-    font-family: inter;
     font-size: 12px;
     font-weight: bold;
     color: var(--text);
@@ -183,11 +178,11 @@ section#daily-verse .verse-actions button p {
 }
 
 .devotional-content h3.title {
+    font-family: "Raleway" !important;
     color: #ebebeb;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: wrap;
-    font-family: inter;
     font-weight: 500;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -200,11 +195,15 @@ section#daily-verse .verse-actions button p {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: wrap;
-    font-family: inter;
     font-size: 16px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 7;
+}
+
+.devotional-content p.message > * {
+    font-family: "Raleway" !important;
+    font-size: 1.7ch;
 }
 
 .devotional-expanded[aria-hidden="true"] {
@@ -267,14 +266,14 @@ section#daily-verse .verse-actions button p {
 }
 
 .d-e-title {
-    font-family: robotoSlab;
     font-size: 20px;
 }
 
 .d-e-message {
-    font-family: inter;
     text-align: justify;
-    line-height: 2ch;
+    line-height: 3.5ch;
+    font-family: "Raleway" !important;
+    font-size: 1.9ch;
 }
 
 .discover-cards {
@@ -329,12 +328,13 @@ section#recommended-readings .reading-card .r-card-img img {
 }
 
 section#recommended-readings .rc-title {
+    font-family: "Raleway" !important;
+    text-transform: uppercase;
     max-width: 220px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: wrap;
-    font-family: inter;
-    font-size: 16px;
+    font-size: 1.9ch;
     font-weight: bold;
     display: -webkit-box;
     margin-bottom: .5ch;
@@ -418,7 +418,6 @@ section#trending-podcasts .rc-title {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: wrap;
-    font-family: inter;
     font-size: 16px;
     font-weight: bold;
     display: -webkit-box;

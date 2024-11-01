@@ -65,12 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="card-info">
                 <div class="rc-title">${category["article_title"]}</div>
-                <div class="rc-author-datetime">
-                    <div class="rc-datetime">20 minutes read</div>
+                <div class="rc-fav">
+                    <button type="button" style="" onclick="openSectionChapters('${category['article_id']}')">Read</button>
                 </div>
-            </div>
-            <div class="rc-fav">
-                <button type="button" style="" onclick="openSectionChapters('${category['article_id']}')">Start</button>
             </div>
         `;
 

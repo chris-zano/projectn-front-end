@@ -19,7 +19,6 @@ div.explore-search-bar input[type="search"] {
     height: 100%;
     width: 100%;
     text-indent: 1ch;
-    font-family: inter;
     font-size: 16px;
     color: var(--text);
 }
@@ -57,6 +56,10 @@ div.explore-search-results > div {
     padding: 0.5ch 1ch;
     border-radius: 1ch;
 }
+
+div.explore-search-results > div > * {
+    font-family: "Raleway" !important;
+}
 /* explore grid */
 
 div.explore-title {
@@ -66,7 +69,6 @@ div.explore-title {
 
 div.explore-title h2 {
     font-size: 25px;
-    font-family: inter;
 }
 
 div.explore-grid {
@@ -89,14 +91,12 @@ div.explore-grid div.grid-card .card-icon i {
 }
 
 div.explore-grid div.grid-card .card-title p {
-    font-family: inter;
-    font-weight: bold;
-    font-size: 18px;
+    /* font-weight: bold; */
+    font-size: 2ch;
     color: var(--text);
 }
 
 div.explore-grid div.grid-card .card-description p {
-    font-family: inter;
     font-size: 14px;
     color: var(--text);
 }

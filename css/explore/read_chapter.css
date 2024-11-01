@@ -65,7 +65,6 @@ section.top-header div.date-time i {
 }
 
 section.top-header div.article-title#article-title {
-    font-family: robotoSlab;
     font-size: 28px;
     font-weight: bold;
 }
@@ -96,6 +95,9 @@ article.chapter #message {
 
 article.chapter #message > * {
     color: var(--text-safe-color);
+    line-height: 3.5ch;
+    font-family: "Raleway" !important;
+    font-size: 1.9ch;
 }
 
 article.chapter section.image {

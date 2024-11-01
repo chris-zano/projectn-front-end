@@ -10,14 +10,14 @@ ul#category_sections .section-item {
     margin-block: 1ch;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     gap: 1ch;
-    width: 100%;
+    width: 90%;
     height: 90px;
+    margin-inline:auto;
 }
 
 ul#category_sections .section-item .r-card-img {
-    width: 85px;
+    width: 95px;
     height: 100%;
 }
 
@@ -25,40 +25,25 @@ ul#category_sections .section-item .r-card-img img {
     width: 100%;
     height: 100%;
     border-radius: var(--border-radius);
+    object-fit: cover;
 }
 
 ul#category_sections .rc-title {
-    width: 190px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: wrap;
-    font-family: inter;
     font-size: 16px;
-    font-weight: bold;
+    /* font-weight: bold; */
     display: -webkit-box;
     margin-bottom: .5ch;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
 }
 
-ul#category_sections .rc-author-datetime {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.5ch;
-}
 
-ul#category_sections .rc-category,
-ul#category_sections .rc-datetime {
-    font-size: 12px;
-}
-
-ul#category_sections .rc-fav {
-    display: grid;
-    place-items: center;
-}
 
 ul#category_sections .rc-fav button {
+    background-color: var(--secondary);
     outline: none;
     border: none;
     box-shadow: inset;
@@ -67,7 +52,6 @@ ul#category_sections .rc-fav button {
     border-radius: var(--border-radius);
     display: grid;
     place-items: center;
-    font-family: inter;
     font-size: 16px;
     font-weight: 500;
 }

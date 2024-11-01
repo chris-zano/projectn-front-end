@@ -8,7 +8,7 @@ i.play-target {
 
 
 section.broadcasts-wrapper {
-    margin-top: 60px;
+    /* margin-top: 60px; */
     padding: 1ch;
 }
 
@@ -223,6 +223,7 @@ div.section-widgets {
 
 .episode-title {
     margin: 0;
+    font-weight: 500;
 }
 
 .episode .thumbnail .item-details .published {

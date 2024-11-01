@@ -77,7 +77,6 @@ img {
 }
 
 h2.section-title {
-    font-family: inter;
     font-weight: 600;
     font-size: 20px;
     color: var(--text);

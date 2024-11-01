@@ -55,7 +55,6 @@ div#read-appbar div.row button {
 }
 
 .overlay .details p {
-    font-family: inter;
     font-size: 14px;
     overflow: hidden;
     display: -webkit-box;

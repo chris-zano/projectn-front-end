@@ -217,15 +217,41 @@ const getDailyDevotional = async () => {
         const formattedDate = `${day}${ordinalSuffix(day)} ${month}, ${year}`;
 
         // Remove the <img> tag from the introtext
-        const cleanedIntroText = devotional.introtext.replace(/<img[^>]*>/i, '');
+        const cleanedIntroText = devotional.introtext
+            .replace(/<img[^>]*>/i, '')
+            // Remove all inline styles
+            .replace(/ style="[^"]*"/g, '')
+            // Remove <style> tags and their content
+            .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+            // Remove <img> tags
+            .replace(/<img[^>]*>/i, '');
 
-        document.getElementById("devotional-title").innerText = themeTitle;
+        document.getElementById("devotional-title").innerText = themeTitle
+            // Remove all inline styles
+            .replace(/ style="[^"]*"/g, '')
+            // Remove <style> tags and their content
+            .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+            // Remove <img> tags
+            .replace(/<img[^>]*>/i, '');
         document.getElementById("devotional-message").innerHTML = cleanedIntroText
 
-        document.getElementById("d-e-title").innerText = themeTitle;
+        document.getElementById("d-e-title").innerText = themeTitle
+            // Remove all inline styles
+            .replace(/ style="[^"]*"/g, '')
+            // Remove <style> tags and their content
+            .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+            // Remove <img> tags
+            .replace(/<img[^>]*>/i, '');
+        const cleanedFullText = devotional.fulltext
+            // Remove all inline styles
+            .replace(/ style="[^"]*"/g, '')
+            // Remove <style> tags and their content
+            .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+            // Remove <img> tags
+            .replace(/<img[^>]*>/i, '')
         document.getElementById("d-e-message").innerHTML = `
             <div>${cleanedIntroText}</div>
-            <div>${devotional.fulltext}</div>
+            <div>${cleanedFullText}</div>
         `
     } catch (error) {
         // Handle any errors that occur during fetch
@@ -236,7 +262,7 @@ const getDailyDevotional = async () => {
 const getVideoIframes = async (url) => {
     const loader = new Loader('loader', 300);
     loader.start();
-    const response = await fetch(`${BASE_URL}${url}`);
+    const response = await fetch(`${BASE_URL}${url} `);
     const data = [...await response.json()].slice(0, 5);
     loader.stop();
 
@@ -247,15 +273,15 @@ const getVideoIframes = async (url) => {
         card.innerHTML = `
         <div class="video-thumbnail">
             ${item.article_intro}
+        </div >
+    <div class="video-info">
+        <h3 class="video-title">${item.article_title}</h3>
+        <div class="video-meta">
+            <span class="video-date">${item.date || 'Unknown Date'}</span>
+            <span class="video-views">${item.play_count || 0} views</span>
         </div>
-        <div class="video-info">
-            <h3 class="video-title">${item.article_title}</h3>
-            <div class="video-meta">
-                <span class="video-date">${item.date || 'Unknown Date'}</span>
-                <span class="video-views">${item.play_count || 0} views</span>
-            </div>
-        </div>
-    `;
+    </div>
+`;
         document.getElementById('vid-grid').append(card);
     });
 }
@@ -269,7 +295,7 @@ const onDeviceReady = async () => {
     getPodcastPicks();
     getRecommendedReadingCards();
 
-    const urls= [
+    const urls = [
         '/articles/wisdom-nuggets',
         '/articles/motivationals',
         '/articles/5-minutes-inspirational',

@@ -17,7 +17,7 @@ body {
     margin: 0px;
     width: 100%;
     background-color: var(--theme-background);
-    font-family: inter;
+    font-family: "Raleway" !important;
     color: var(--text);
 }
 
@@ -30,12 +30,5 @@ body {
         margin: -90px 0px 0px -198px;
         /* offset vertical: half of image height */
         /* offset horizontal: half of image width and text area width */
-    }
-}
-
-@media screen and (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--theme-background);
-
     }
 }
