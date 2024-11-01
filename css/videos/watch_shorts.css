@@ -1,0 +1,64 @@
+
+div#read-appbar {
+    background-color: var(--background-light);
+    position: fixed;
+    top: 0.6ch;
+    left: 0;
+    right: 0;
+    height: 45px;
+    padding: 1ch 2ch;
+}
+
+div#read-appbar div.row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2ch;
+}
+
+div#read-appbar div.row button {
+    outline: none;
+    border: none;
+    background-color: unset;
+    background: unset;
+    font-size: 22px;
+    color: var(--text);
+}
+
+.short {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.342);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.overlay .details {
+    position: fixed;
+    left: 1ch;
+    right: 1ch;
+    bottom: 0ch;
+    margin-bottom: 1ch;
+    background-color: rgba(0, 0, 0, 0.082);
+    padding: 1ch;
+    display: flex;
+    align-items: start;
+}
+
+.overlay .details p {
+    font-family: inter;
+    font-size: 14px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}

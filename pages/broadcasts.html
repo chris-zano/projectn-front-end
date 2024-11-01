@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <script src="https://kit.fontawesome.com/5c75cc87b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/cordova-config.css">
+    <link rel="stylesheet" href="../css/global/root.css">
+    <link rel="stylesheet" href="../css/global/app-drawer.css">
+    <link rel="stylesheet" href="../css/global/bottom-navbar.css">
+    <link rel="stylesheet" href="../css/broadcast/broadcast_main.css">
+</head>
+
+<body>
+
+    <div class="container_wrapper_main">
+        <main class="index_main" id="content_main">
+
+            <div class="app-bar">
+                <div class="row">
+                    <button type="button" onclick="toggleDrawer()">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="float-right-group">
+                        <button type="button" onclick="">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <button type="button" onclick="">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+           <section class="broadcasts-wrapper">
+                <div class="row-carousel-nav">
+                    <div class="btn-wrap" onclick="filterBroadcastsBy(this, 'podcast')" data-focus="true" id="tb-podcasts">Podcasts</div>
+                    <div class="btn-wrap" onclick="filterBroadcastsBy(this, '/articles/wisdom-nuggets')" data-focus="false">Wisdom Nuggets</div>
+                    <div class="btn-wrap" onclick="filterBroadcastsBy(this, '/articles/motivationals')" data-focus="false">Motivationals</div>
+                    <div class="btn-wrap" onclick="filterBroadcastsBy(this, '/articles/5-minutes-inspirational')" data-focus="false">5 Minute Inspirational</div>
+                    <div class="btn-wrap" onclick="filterBroadcastsBy(this, '/articles/the-testimony-of-jesus-christ')" data-focus="false">Testimony of Jesus </div>
+                </div>
+                <div class="section-widgets" id="widgets"></div>
+            </section>
+        </main>
+        <footer id="footer_bottom_navbar">
+            <!-- bottom navigation bar -->
+            <ul id="bottom-navigation-list" style="list-style: none;">
+                <li class="bottom-nav-item">
+                    <a href="../home.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="nav-label">Home</span>
+                    </a>
+                </li>
+                <li class="bottom-nav-item">
+                    <a href="./explore.html">
+                        <i class="fa-solid fa-compass"></i>
+                        <span class="nav-label">Explore</span>
+                    </a>
+                </li>
+                <li class="bottom-nav-item active">
+                    <a href="./broadcasts.html">
+                        <i class="fa-solid fa-podcast"></i>
+                        <span class="nav-label">Broadcasts</span>
+                    </a>
+                </li>
+                <li class="bottom-nav-item">
+                    <a href="./account.html">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <span class="nav-label">Account</span>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        <div class="loader" id="loader" aria-hidden="true"></div>
+    </div>
+
+    <script src="../js/loader.js"></script>
+    <script src="../js/broadcast/broadcast_widgets.js"></script>
+    <script src="../js/broadcast/broadcast_main.js"></script>
+    <script src="../js/podcasts/podcasts.js"></script>
+    <script src="../js/utils.js"></script>
+</body>
+
+</html>

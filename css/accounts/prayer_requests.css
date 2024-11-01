@@ -1,0 +1,59 @@
+
+.form-container {
+    padding: 1ch;
+}
+
+#prayerRequestForm {
+    margin-top: 65px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 25px;
+    color: var(--text);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"]{
+    width: 95%;
+    height: 45px;
+    text-indent: 1ch;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select {
+    height: 45px;
+    width: 95%;
+    text-indent: 1ch;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 95%;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+.submit-button {
+    background-color: var(--accent);
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 1ch;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    
+}

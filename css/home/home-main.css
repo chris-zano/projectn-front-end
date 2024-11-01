@@ -1,0 +1,507 @@
+
+main#content_main .banner_wrapper {
+    width: 100%;
+    height: calc(100% - 80px);
+    margin: 0 auto;
+    margin-top: 50px;
+    aspect-ratio: 1 / 1.78;
+}
+
+
+
+.video-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1ch;
+    background-color: var(--card-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.video-thumbnail {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.video-thumbnail iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-info {
+    padding: 0.5ch;
+}
+
+.video-title {
+    font-size: 1.7ch;
+    font-weight: bold;
+    margin: 0.5ch 0;
+    color: var(--text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.video-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.video-date, .video-views {
+    margin-right: 0.5ch;
+}
+
+
+main#content_main div.banner_wrapper video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1.78;
+    zoom: normal;
+    -ms-zoom: normal;
+}
+
+main.index_main {
+    position: relative;
+}
+
+main div.home_feed {
+    /* margin-top: 50px; */
+    background-color: var(--theme-background);
+    padding: 1.5ch;
+}
+
+/* daily verse */
+
+section#daily-verse {
+    margin-top: 55px;
+    border-left: 2px solid var(--primary);
+    padding: 1ch 1ch 1ch 1.5ch;
+}
+
+section#daily-verse .verse-card .title-text {
+    font-family: inter;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text);
+}
+
+section#daily-verse .verse-card .verse-date {
+    font-family: inter;
+    color: var(--theme-icon);
+    font-size: 13px;
+    font-weight: light;
+    margin-top: .2ch;
+}
+
+section#daily-verse .verse-card .verse-ref,
+section#daily-verse .verse-card .verse-ref a {
+    font-family: inter;
+    color: var(--primary);
+    text-decoration: underline;
+    font-size: 15px;
+    font-weight: light;
+    margin-top: .2ch;
+}
+
+section#daily-verse .verse-card .insp-text {
+    font-family: inter;
+    color: var(--theme-icon);
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 3ch;
+}
+
+section#daily-verse .verse-card .verse {
+    font-family: robotoSlab;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: .4ch;
+}
+
+section#daily-verse .verse-actions {
+    display: flex;
+    gap: 2ch;
+}
+
+section#daily-verse .verse-actions button {
+    outline: none;
+    background-color: unset;
+    border: none;
+    box-shadow: none;
+    width: fit-content;
+    height: fit-content;
+}
+
+section#daily-verse .verse-actions button i {
+    font-size: 22px;
+    color: var(--text);
+}
+
+
+section#daily-verse .verse-actions button p {
+    font-family: inter;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text);
+}
+
+/* devotional begins here */
+
+.devotional-card {
+    border-radius: var(--border-radius);
+    position: relative;
+    height: 280px;
+    max-width: 400px;
+    margin-inline: auto;
+}
+
+.devotional-card img {
+    height: 100%;
+    width: 100%;
+    object-fit: none;
+    border-radius: var(--border-radius);
+}
+
+.devotional-card .devotional-content {
+    background-color: rgba(18, 18, 19, 0.753);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--border-radius);
+    padding: .5ch 2ch;
+}
+
+.devotional-content h3.title {
+    color: #ebebeb;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    font-family: inter;
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.devotional-content p.message {
+    color: #ebebeb;
+    margin-top: 0ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    font-family: inter;
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+}
+
+.devotional-expanded[aria-hidden="true"] {
+    transform: translateY(-100%);
+}
+
+.devotional-expanded {
+    transform: translateY(0);
+    transition: transform ease-in-out 300ms;
+    z-index: 10002;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--theme-background);
+    overflow: scroll;
+}
+
+.devotional-expanded .d-e-banner {
+    height: 30%;
+    padding: 0;
+    position: relative;
+}
+
+.d-e-banner .image-banner {
+    width: 100%;
+    height: 100%;
+}
+
+.d-e-banner .image-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.d-e-banner .overlay-control {
+    background-color: rgba(0, 0, 0, 0.395);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    column-gap: 2ch;
+    justify-content: end;
+    padding: 2.5ch 2.5ch 0 0;
+    font-size: 20px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #6827a1, #ed3df3, #f404c4); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.d-e-text-segment{
+    padding: 1ch 2ch;
+    background-color: var(--card-background);
+}
+
+.d-e-title {
+    font-family: robotoSlab;
+    font-size: 20px;
+}
+
+.d-e-message {
+    font-family: inter;
+    text-align: justify;
+    line-height: 2ch;
+}
+
+.discover-cards {
+    padding: 1ch 0;
+    display: flex;
+    overflow-x: auto;
+    gap: 1ch;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 130px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.card p {
+    margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+section#recommended-readings {
+    width: 100%;
+}
+
+section#recommended-readings .reading-card {
+    padding: 0.5ch;
+    display: flex;
+    gap: 1ch;
+    margin: 1ch 0;
+    width: 100%;
+    height: 90px;
+    position: relative;
+}
+
+section#recommended-readings .reading-card .r-card-img {
+    width: 90px;
+    height: 100%;
+}
+
+section#recommended-readings .reading-card .r-card-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+}
+
+section#recommended-readings .rc-title {
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    font-family: inter;
+    font-size: 16px;
+    font-weight: bold;
+    display: -webkit-box;
+    margin-bottom: .5ch;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+section#recommended-readings .rc-author-datetime {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5ch;
+}
+
+section#recommended-readings .rc-category,
+section#recommended-readings .rc-datetime {
+    font-size: 12px;
+}
+
+section#recommended-readings .rc-fav {
+    position: absolute;
+    right: 1ch;
+    height: 70%;
+    display: grid;
+    place-items: center;
+    float: right;
+}
+
+section#recommended-readings .rc-fav button {
+    outline: none;
+    border: none;
+    background-color: unset;
+    font-size: 20px;
+}
+
+/* podcasts */
+section#trending-podcasts {
+    width: 100%;
+}
+
+section#trending-podcasts .reading-card {
+    padding: 0.5ch;
+    display: flex;
+    gap: 1ch;
+    width: 100%;
+    height: 90px;
+    position: relative;
+}
+
+section#trending-podcasts .reading-card .r-card-img {
+    width: 90px;
+    height: 100%;
+    position: relative;
+}
+
+section#trending-podcasts .reading-card .r-card-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+}
+
+section#trending-podcasts .reading-card .r-card-img .pl-overlay {
+    background-color: rgba(12, 12, 12, 0.555);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--border-radius);
+    display: grid;
+    place-items: center;
+}
+
+section#trending-podcasts .reading-card .r-card-img .pl-overlay i {
+    font-size: 30px;
+    color: #f0eeee;
+}
+
+section#trending-podcasts .rc-title {
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    font-family: inter;
+    font-size: 16px;
+    font-weight: bold;
+    display: -webkit-box;
+    margin-bottom: .5ch;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+section#trending-podcasts .rc-author-datetime {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5ch;
+}
+
+section#trending-podcasts .rc-category,
+section#trending-podcasts .rc-datetime {
+    font-size: 12px;
+}
+
+section#trending-podcasts .rc-fav {
+    position: absolute;
+    right: 1ch;
+    height: 70%;
+    display: grid;
+    place-items: center;
+}
+
+section#trending-podcasts .rc-fav button {
+    outline: none;
+    border: none;
+    background-color: unset;
+    font-size: 22px;
+}
+
+section#videos-categories div.videos-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5ch;
+    place-items: center;
+    margin-inline: auto;
+}
+
+section#videos-categories div.videos-cards div.videos-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+section#videos-categories div.videos-cards div.videos-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    border-radius: 1ch;
+}
+
+
+section#videos-categories div.videos-cards div.videos-card div.overlay {
+    background-color: rgba(29, 29, 29, 0.432);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom-left-radius: 1ch;
+    border-bottom-right-radius: 1ch;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+section#videos-categories  div.videos-cards div.videos-card div.overlay i {
+    margin-left: 0.5ch;
+    color: #ebebeb;
+}
+
+section#videos-categories div.videos-cards div.videos-card div.overlay p {
+    color: #ebebeb;
+    margin-top: 0.5ch;
+    margin-left: 0.5ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}

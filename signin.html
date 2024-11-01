@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <link rel="stylesheet" href="./css/login/login.css">
+</head>
+<body>
+  <div class="container_main">
+    <div class="welcome-screen">
+        <video autoplay loop muted playsinline id="bg-video">
+          <source src="./assets/images/banner/background-video.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <div class="overlay">
+          <h1>Welcome to Our Platform</h1>
+          <button id="get-started" class="elevated-button">Get Started</button>
+        </div>
+      </div>
+    
+      <div class="auth-screen" id="auth-screen">
+        <div class="form-container">
+          <h2>Create an Account</h2>
+          <form id="signup-form">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+    
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="profile-pic">Profile Picture:</label>
+            <input type="file" id="profile-pic" name="profile-pic" accept="image/*" onchange="previewImage(event)">
+            <img id="image-preview" alt="Profile Picture Preview" />
+    
+            <button type="submit" class="submit-button">Sign Up</button>
+            <p>Or continue with</p>
+            <button class="oauth-button">Sign in with OAuth</button>
+          </form>
+        </div>
+      </div>
+  </div>
+
+  <script src="./js/login/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <script src="https://kit.fontawesome.com/5c75cc87b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/global/root.css">
+    <link rel="stylesheet" href="../css/cordova-config.css">
+    <link rel="stylesheet" href="../css/podcast/podcast_home.css">
+
+</head>
+
+<body>
+    <div class="container_wrapper_main" id="container_wrapper_main">
+        <main class="index_main" id="content_main">
+            <div class="app-bar">
+                <div class="row">
+                    <button type="button" onclick="goBack()">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+
+                    <h1 id="appbar-title"></h1>
+                </div>
+            </div>
+
+            <section class="content_grid">
+                    <div class="music-player__toolbar music-toolbar">
+                        <div class="music-player__sound-wave"><i class="bar"></i><i class="bar"></i><i class="bar"></i><i
+                                class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i><i
+                                class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i><i
+                                class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i>
+                            <i class="bar"></i><i class="bar"></i>
+                        </div>
+        
+                        <div class="player-min">
+                            <div class="current-playing" id="current-playing-marquee" >
+                                No Media Playing
+                            </div>
+                            <div class="controls">
+                                <i class="fa-solid fa-play" id="play-pause-btn" data-in-play="episode-null" onclick="playPause(this)"></i>
+                            </div>
+                        </div>
+        
+                    </div>
+    
+                <div class="episode-list">
+                    <div class="episode" id="episode-1" onclick="playEpisode(this)" data-is-playing="false" data-src="../assets/audio/audio1.mp3">
+                        <section class="thumbnail">
+                            <img src="../assets/images/image3.jpg" alt="podcast episode thumbnail">
+                            <div class="item-details">
+                                <h3 class="episode-title">Deep Dive into Topic A </h3>
+                                <div class="published">
+                                    <p>5 May 21</p>
+                                    <p>35min</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="episode" id="episode-2" onclick="playEpisode(this)" data-is-playing="false" data-src="../assets/audio/audio1.mp3">
+                        <section class="thumbnail">
+                            <img src="../assets/images/image3.jpg" alt="podcast episode thumbnail">
+                            <div class="item-details">
+                                <h3 class="episode-title">Deep Dive into Topic B </h3>
+                                <div class="published">
+                                    <p>5 May 21</p>
+                                    <p>35min</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="episode" id="episode-3" onclick="playEpisode(this)" data-is-playing="false" data-src="../assets/audio/audio1.mp3">
+                        <section class="thumbnail">
+                            <img src="../assets/images/image3.jpg" alt="podcast episode thumbnail">
+                            <div class="item-details">
+                                <h3 class="episode-title">Deep Dive into Topic C </h3>
+                                <div class="published">
+                                    <p>5 May 21</p>
+                                    <p>35min</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="episode" id="episode-4" onclick="playEpisode(this)" data-is-playing="false" data-src="../assets/audio/audio1.mp3">
+                        <section class="thumbnail">
+                            <img src="../assets/images/image3.jpg" alt="podcast episode thumbnail">
+                            <div class="item-details">
+                                <h3 class="episode-title">Deep Dive into Topic D </h3>
+                                <div class="published">
+                                    <p>5 May 21</p>
+                                    <p>35min</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="episode" id="episode-5" onclick="playEpisode(this)" data-is-playing="false" data-src="../assets/audio/audio1.mp3">
+                        <section class="thumbnail">
+                            <img src="../assets/images/image3.jpg" alt="podcast episode thumbnail">
+                            <div class="item-details">
+                                <h3 class="episode-title">Deep Dive into Topic E </h3>
+                                <div class="published">
+                                    <p>5 May 21</p>
+                                    <p>35min</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="episode" id="episode-6" onclick="playEpisode(this)" data-is-playing="false" data-src="../assets/audio/audio1.mp3">
+                        <section class="thumbnail">
+                            <img src="../assets/images/image3.jpg" alt="podcast episode thumbnail">
+                            <div class="item-details">
+                                <h3 class="episode-title">Deep Dive into Topic F </h3>
+                                <div class="published">
+                                    <p>5 May 21</p>
+                                    <p>35min</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="episode" id="episode-7" onclick="playEpisode(this)" data-is-playing="false" data-src="../assets/audio/audio1.mp3">
+                        <section class="thumbnail">
+                            <img src="../assets/images/image3.jpg" alt="podcast episode thumbnail">
+                            <div class="item-details">
+                                <h3 class="episode-title">Deep Dive into Topic G </h3>
+                                <div class="published">
+                                    <p>5 May 21</p>
+                                    <p>35min</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="episode" id="episode-8" onclick="playEpisode(this)" data-is-playing="false" data-src="../assets/audio/audio1.mp3">
+                        <section class="thumbnail">
+                            <img src="../assets/images/image3.jpg" alt="podcast episode thumbnail">
+                            <div class="item-details">
+                                <h3 class="episode-title">Deep Dive into Topic H </h3>
+                                <div class="published">
+                                    <p>5 May 21</p>
+                                    <p>35min</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/podcasts/podcasts.js"></script>
+    <script src="../js/utils.js"></script>
+</body>
+
+</html>

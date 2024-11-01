@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <script src="https://kit.fontawesome.com/5c75cc87b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/global/root.css">
+    <link rel="stylesheet" href="../css/cordova-config.css">
+    <link rel="stylesheet" href="../css/videos/watch_video.css">
+</head>
+
+<body>
+
+    <div class="container_wrapper_main">
+        <main class="index_main" id="content_main">
+            <div class="appbar">
+                <div class="row">
+                    <button type="button" onclick="goBack()">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+            </div>
+
+            <section class="player">
+                <div class="video-player">
+                    <div class="video-container">
+                        <video src="" id="video-target"></video>
+                    </div>
+                    <div class="video-player-overlay" aria-hidden="false">
+                        <div class="player-controls">
+                            <div class="play-pause">
+                                <i class="fa-solid fa-play" onclick="playPauseVideo(this)" data-is-playing="false"></i>
+                            </div>
+                            <div class="progress-indicator">
+                                <div class="current-time" id="current-time">00:00:00</div>
+                                <div class="progress-bar">
+                                    <div class="progression" id="progression">
+                                        <i class="fa-solid fa-circle" id="progress-circle"></i>
+                                    </div>
+                                </div>
+                                <div class="duration" id="total-duration">00:00:00</div>
+                            </div>
+                            <div class="expanded">
+                                <i class="fa-solid fa-expand" onclick="enableFullScreen()"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-details">
+                    <div class="lv-details">
+                        <div class="lvd-image">
+                            <img src="../assets/images/image3.jpg" alt="author image">
+                        </div>
+                        <div class="lvd-body">
+                            <div class="lvdb-title" id="lvdb-title"></div>
+                            <div class="lvdb-release-date" ><span id="rl-date"></span> <i class="fa-solid fa-circle"
+                                    style="font-size: 2px;"></i> <span id="vc-views"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="video-actions">
+                <div class="action-buttons">
+                    <div class="action-item" onclick="likeThisVideo(this)" data-liked="false">
+                        <i class="fas fa-thumbs-up"></i>
+                        <span>Like</span>
+                    </div>
+                    <div class="action-item">
+                        <i class="fas fa-share"></i>
+                        <span>Share</span>
+                    </div>
+                    <div class="action-item" onclick="showExpandedComments()">
+                        <i class="fas fa-comment"></i>
+                        <span>Comment</span>
+                    </div>
+                    <div class="action-item">
+                        <i class="fas fa-download"></i>
+                        <span>Download</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="comments" onclick="showExpandedComments()">
+                <strong>Comments</strong>
+                <div class="comment-row">
+                    <div class="author-comment">
+                        <img src="../assets/images/image1.jpg" alt="User Avatar" class="avatar">
+                        <h4 class="username">John Doe</h4>
+                    </div>
+                    <div class="comment-content">
+                        <p class="comment-text">This is the first comment. Really love this post!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Overlay that will close the comments section when clicked -->
+            <div class="overlay" id="comm-overlay" aria-hidden="true" onclick="hideExpandedComments()"></div>
+
+            <!-- Expanded comments section -->
+            <section class="comments-expanded" id="comments-expanded" aria-hidden="true">
+                <strong>Comments</strong>
+                <div class="comments-list" id="comments-list">
+                    <div class="comment-row">
+                        <div class="author-comment">
+                            <img src="../assets/images/image1.jpg" alt="User Avatar" class="avatar">
+                            <h4 class="username">John Doe</h4>
+                        </div>
+                        <div class="comment-content">
+                            <p class="comment-text">This is the first comment. Really love this post!</p>
+                        </div>
+                    </div>
+                    <div class="comment-row">
+                        <div class="author-comment">
+                            <img src="../assets/images/image1.jpg" alt="User Avatar" class="avatar">
+                            <h4 class="username">John Doe</h4>
+                        </div>
+                        <div class="comment-content">
+                            <p class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, a
+                                aliquam! Inventore explicabo veritatis minima ipsum aliquid? Voluptates, repudiandae
+                                quam dignissimos blanditiis incidunt unde cupiditate minima expedita exercitationem
+                                numquam, porro molestiae laboriosam consequatur optio quis eum neque dolorem recusandae.
+                                Quibusdam quo, praesentium quaerat iste cumque delectus rem fugit accusantium vero.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input for typing comments -->
+                <div class="comment-input-container">
+                    <input type="text" placeholder="Write a comment..." class="comment-input" id="comment-input">
+                    <button class="send-button" id="send-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </section>
+
+            <section id="suggestions">
+
+            </section>
+
+
+        </main>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="../js/data/videos.js"></script>
+    <script src="../js/broadcast/broadcast_widgets.js"></script>
+    <script src="../js/videos/watch_video.js"></script>
+    <script src="../js/utils.js"></script>
+</body>
+
+</html>

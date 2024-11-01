@@ -1,0 +1,102 @@
+/* seaarch bar */
+div.explore-search-bar {
+    background-color: var(--card-background);
+    margin: 1ch 2ch;
+    padding: 0.5ch 1ch;
+    height: 45px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.explore-search-bar input[type="search"] {
+    background-color: unset;
+    background: unset;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    text-indent: 1ch;
+    font-family: inter;
+    font-size: 16px;
+    color: var(--text);
+}
+
+div.explore-search-bar button[type="submit"] {
+    outline: none;
+    border: none;
+    background-color: unset;
+    background: unset;
+    margin-right: 2ch;
+    font-size: 18px;
+    color: var(--text);
+}
+
+/* search results */
+div.explore-search-results[aria-hidden="true"] {
+    display: none;
+}
+
+div.explore-search-results {
+    background-color: var(--card-background);
+    margin: 1ch 2ch;
+    padding: 0.5ch 1ch;
+    border-radius: var(--border-radius);
+    max-height: 400px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1ch;
+}
+
+
+div.explore-search-results > div {
+    background-color: var(--modal-background);
+    padding: 0.5ch 1ch;
+    border-radius: 1ch;
+}
+/* explore grid */
+
+div.explore-title {
+    margin: 0.5ch;
+    padding: 0.5ch 1ch;
+}
+
+div.explore-title h2 {
+    font-size: 25px;
+    font-family: inter;
+}
+
+div.explore-grid {
+    padding: 0.5ch 1ch;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1ch;
+}
+
+div.explore-grid div.grid-card {
+    height: 150px;
+    background-color: var(--card-background);
+    border-radius: 1ch;
+    padding: 1.5ch 1ch;
+    box-shadow: 0px 3px 3px #77777759;
+}
+
+div.explore-grid div.grid-card .card-icon i {
+    font-size: 32px;
+}
+
+div.explore-grid div.grid-card .card-title p {
+    font-family: inter;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--text);
+}
+
+div.explore-grid div.grid-card .card-description p {
+    font-family: inter;
+    font-size: 14px;
+    color: var(--text);
+}

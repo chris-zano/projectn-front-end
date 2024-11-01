@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <script src="https://kit.fontawesome.com/5c75cc87b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/global/root.css">
+    <link rel="stylesheet" href="css/cordova-config.css">
+    <link rel="stylesheet" href="css/global/bottom-navbar.css">
+    <link rel="stylesheet" href="./css/global/app-drawer.css">
+    <link rel="stylesheet" href="css/home/home-main.css">
+</head>
+
+<body>
+
+    <div class="container_wrapper_main" id="container_wrapper_main">
+
+        <main class="index_main" id="content_main">
+            <div class="app-bar">
+                <div class="row">
+                    <div >
+                        <button type="button" onclick="openShop()">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home_feed">
+                <!-- daily verse -->
+                <section id="daily-verse">
+                    <div class="verse-card">
+                        <div class="title-text">daily verse</div>
+                        <div class="verse-date" id="verse-date">Thurday, October 10, 2024</div>
+                        <div class="verse-ref"><a href="#">Genesis 1: 3</a></div>
+                        <div class="insp-text">A new day, new life</div>
+                        <p class="verse">
+                            Then God said, "Let there be light"; and there was light.
+                        </p>
+                    </div>
+                    <div class="verse-actions">
+                        <!-- like -->
+                        <button type="button" onclick="addToLikedVerses(this)" data-liked="false">
+                            <i class="fa-solid fa-heart" id="verse-like-btn"></i>
+                            <p>203.44k</p>
+                        </button>
+                        <!-- share -->
+                        <button type="button" onclick="shareBibleVerse(this)">
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <p>72.04k</p>
+                        </button>
+
+                    </div>
+                </section>
+
+                <section class="devotional-expanded" id="devotional-expanded" aria-hidden="true">
+                    <!-- banner -->
+                    <div class="d-e-banner">
+                        <div class="image-banner">
+                            <img src="assets/images/banner/devotional_wavy.jpg" alt="Devotional" width="100%">
+                        </div>
+                        <div class="overlay-control">
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <i class="fa-solid fa-times-circle" onclick="hideDevotionalExpanded()"></i>
+                        </div>
+                    </div>
+
+                    <div class="d-e-text-segment">
+                        <!-- title -->
+                        <div class="d-e-title">
+                            <h3 class="gradient-text" id="d-e-title"></h3>
+                        </div>
+                        <!-- devotional - text -->
+
+                        <div class="d-e-message" id="d-e-message"></div>
+                    </div>
+                </section>
+
+                <!-- devotional -->
+                <section id="daily-devotional">
+                    <h2 class="section-title">Devotional</h2>
+                    <div class="devotional-card" onclick="showDevotionalExpanded()">
+                        <img src="assets/images/banner/devotional_wavy.jpg" alt="Devotional" width="100%"
+                            height="250px">
+                        <div class="devotional-content">
+                            <h3 class="title" id="devotional-title"></h3>
+                            <p class="message" id="devotional-message">Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Rerum, aliquid
+                                veritatis maxime magni dignissimos atque est error soluta numquam quos recusandae
+                                incidunt reiciendis quisquam amet adipisci assumenda odit facilis. Asperiores.
+                                Soluta assumenda reiciendis aperiam. Alias iure voluptatem deserunt assumenda fugiat
+                                atque quia corrupti maiores fugit ab nobis debitis laudantium voluptates eius possimus
+                                reiciendis nesciunt, itaque error molestiae adipisci, unde reprehenderit!
+                                Nam placeat itaque reprehenderit neque pariatur, corrupti quos commodi libero nulla vero
+                                ex delectus illo iusto doloremque perspiciatis non soluta nihil vitae dolorem tempore.
+                                Necessitatibus iste accusantium iure delectus quasi.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- trending podcasts -->
+                <section id="trending-podcasts">
+                    <h2 class="section-title" style="margin-top: 3ch;">Picks for you</h2>
+                    <div class="reading-cards" id="trending-podcast-cards">
+
+                    </div>
+
+                </section>
+
+                <section id="videos">
+                    <h2 class="section-title">Videos</h2>
+                    <div id="vid-grid"></div>
+                </section>
+                <!-- recommended readings -->
+                <section id="recommended-readings">
+                    <h2 class="section-title">Recommended reading</h2>
+                    <div class="reading-cards" id="r-reading-cards">
+                    </div>
+
+                </section>
+            </div>
+        </main>
+
+        <!-- bottom navigation bar -->
+        <footer id="footer_bottom_navbar">
+            <!-- bottom navigation bar -->
+            <ul id="bottom-navigation-list" style="list-style: none;">
+                <li class="bottom-nav-item active">
+                    <a href="home.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="nav-label">Home</span>
+                    </a>
+                </li>
+                <li class="bottom-nav-item">
+                    <a href="pages/explore.html">
+                        <i class="fa-solid fa-compass"></i>
+                        <span class="nav-label">Explore</span>
+                    </a>
+                </li>
+                <li class="bottom-nav-item">
+                    <a href="pages/broadcasts.html">
+                        <i class="fa-solid fa-podcast"></i>
+                        <span class="nav-label">Broadcasts</span>
+                    </a>
+                </li>
+                <li class="bottom-nav-item">
+                    <a href="pages/account.html">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <span class="nav-label">Account</span>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+
+        <div class="loader" id="loader" aria-hidden="true"></div>
+
+
+    </div>
+
+    <script src="./js/loader.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/widgets.js"></script>
+    <script src="js/data/podcasts.js"></script>
+    <script src="js/data/category_overview.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

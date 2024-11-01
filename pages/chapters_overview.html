@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <script src="https://kit.fontawesome.com/5c75cc87b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/global/root.css">
+    <link rel="stylesheet" href="../css/cordova-config.css">
+    <link rel="stylesheet" href="../css/explore/category_overview.css">
+
+</head>
+
+<body>
+
+    <div class="container_wrapper_main" id="container_wrapper_main">
+        <main class="index_main" id="content_main">
+            <!-- app bar -->
+            <div class="appbar">
+                <div class="row">
+                    <button type="button" onclick="goBack()">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+
+                    <h1 id="appbar-title">Discipleship</h1>
+                </div>
+            </div>
+
+            <!-- scroll view sections -->
+            <ul class="sections" id="category_sections"></ul>
+        </main>
+
+    </div>
+
+    <script src="../js/widgets.js"></script>
+    <script src="../js/data/category_overview.js"></script>
+    <script src="../js/explore/chapters_overview.js"></script>
+    <script src="../js/utils.js"></script>
+</body>
+
+</html>
